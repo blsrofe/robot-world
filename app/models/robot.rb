@@ -1,12 +1,12 @@
 require 'sqlite3'
 
-attr_reader :name,
-            :city,
-            :state,
-            :department,
-            :id
-
 class Robot
+  attr_reader :name,
+              :city,
+              :state,
+              :department,
+              :id
+
   def initialize(robot_params)
     @name = robot_params["name"]
     @city = robot_params["city"]
@@ -32,6 +32,6 @@ class Robot
   end
 
   def save
-    @database.execute("INSERT INTO robots (name, city, state, email) VALUES (?, ?, ?, ?);", @name, @city, @state, @email)
+    @database.execute("INSERT INTO robots (name, city, state, department) VALUES (?, ?, ?, ?);", @name, @city, @state, @department)
   end
 end
