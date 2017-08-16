@@ -1,0 +1,53 @@
+body {
+  background-image: url("http://img.freepik.com/free-photo/robot-doing-the-peace-sign_1048-3527.jpg?size=338&ext=jpg")
+}
+
+a {
+  color: white;
+}
+
+.button {
+  background-color: yellow;
+}
+
+.block {
+  width: 25%;
+  background-color: gray;
+  display: inline-block;
+  margin: 10px;
+  padding:10px;
+  border: 2px dotted black;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-family: fantasy;
+  font-size: 50px;
+  color: #09e3fe;
+  text-shadow: 2px 5px black;
+}
+
+.indent {
+  text-align: center;
+}
+
+#new {
+  color: black;
+}
+
+#home {
+  margin-left: 650px;
+  background-color: yellow;
+}
+
+#center {
+  margin-left: 520px;
+}
+
+.box {
+  background-color: gray;
+  width: 15%;
+  text-align: center;
+}

@@ -1,14 +1,31 @@
-<h1>My Robots</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/custom.css">
+    <title>Robot World</title>
+  </head>
+  <body>
 
 
-<% @robots.each do |robot| %>
-  <h3><a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
-  <p><%= robot.city %></p>
-  <p><%= robot.state %></p>
-  <p><%= robot.department %></p>
-  <a href="/robots/<%= robot.id %>/edit">Edit</a>
-  <form action="/robots/<%= robot.id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="delete"/>
-  </form>
-<% end %>
+    <h1>My Robots</h1>
+
+    <button id="home"><a id="new" href="/robots/new">New Robot</a></button>
+
+
+    <div class="indent">
+      <% @robots.each do |robot| %>
+        <div class="block">
+          <h3><a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
+          <p><%= robot.city %></p>
+          <p><%= robot.state %></p>
+          <p><%= robot.department %></p>
+          <a href="/robots/<%= robot.id %>/edit">Edit</a>
+          <form action="/robots/<%= robot.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input class="button" type="submit" value="delete"/>
+          </form>
+        </div>
+      <% end %>
+  </div>
+  </body>
+</html>
